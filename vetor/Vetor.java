@@ -19,13 +19,23 @@ public class Vetor {
 		}
 	}*/
 	
-	public void adiciona(String elemento) throws Exception {
+	/*public void adiciona(String elemento) throws Exception {
 	  if (this.tamanho < this.elementos.length) {
 		  this.elementos[this.tamanho] = elemento;
 		  this.tamanho++;
 		 } else {
 			 throw new Exception("O vetor já está cherio");
 		 }
+	}*/
+	
+	public boolean adiciona(String elemento) {
+		if (this.tamanho < this.elementos.length) {
+			this.elementos[this.tamanho] = elemento;
+			this.tamanho++;
+			return true;
+		}
+		return false;
+		
 	}
 	
 	
