@@ -2,9 +2,8 @@ package com.marcus.estruturadados.vetor.teste;
 
 import com.marcus.estruturadados.vetor.Vetor;
 
-public class Aula04 {
-	public static void main(String[] args) {
-		
+public class Aula05 {
+	public static void main(String[]args) {
 
 		Vetor vetor = new Vetor(10);
 		
@@ -12,8 +11,7 @@ public class Aula04 {
 		vetor.adiciona("elemento 2");
 		vetor.adiciona("elemento 3");
 		
-		System.out.println(vetor.buscar(1));
-		
+		System.out.println(vetor.busca("elemento 2"));
 	}
 
 }

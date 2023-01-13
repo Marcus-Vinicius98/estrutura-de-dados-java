@@ -1,5 +1,7 @@
 package com.marcus.estruturadados.vetor;
 
+import java.util.Iterator;
+
 public class Vetor {
 
 	private String[] elementos;
@@ -36,6 +38,15 @@ public class Vetor {
 		}
 		return false;
 		
+	}
+	
+	public int busca(String elemento) {
+		for (int i = 0; i < tamanho; i++) {
+			if (this.elementos[i].equals(elemento)) {
+				return i;
+			}
+		}
+		return -1;
 	}
 	
 	public String buscar(int posicao) {
