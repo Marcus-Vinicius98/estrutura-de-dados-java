@@ -1,7 +1,5 @@
 package com.marcus.estruturadados.vetor;
 
-import java.util.Iterator;
-
 public class Vetor {
 
 	private String[] elementos;
@@ -37,6 +35,24 @@ public class Vetor {
 			return true;
 		}
 		return false;
+		
+	}
+	
+	
+	public boolean adicionar(int posicao, String elemento) {
+		if (!(posicao >= 0 && posicao < tamanho)) {
+			throw new IllegalArgumentException("Posição inválida");
+			
+		}
+		//mover os dados 
+		
+		for (int i = this.tamanho; i >= posicao; i--) {
+			this.elementos[i+1] = this.elementos[i];
+		}
+		this.elementos[posicao] = elemento;
+		this.tamanho++;
+		return false;
+		
 		
 	}
 	
